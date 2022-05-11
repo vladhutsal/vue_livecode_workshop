@@ -14,7 +14,13 @@ jobs:
           REMOTE_HOST: ${{ secrets.EC2_HOST }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
+          SOURCE: "backend/app/"
 
-      - name: Run backend
-        run: python3 app/main.py
-        shell: bash
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+
+      - run: pip3 install -r app/requirements.txt
+
+      - run: python3 app/main.py
+
