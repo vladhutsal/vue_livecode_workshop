@@ -28,5 +28,8 @@ jobs:
         with:
           python-version: 3.9
 
+  start:
+    runs-on: ubuntu-latest
+    steps:
       - run: pip3 install -r requirements.txt
       - run: python3 main.py
