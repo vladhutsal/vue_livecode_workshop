@@ -28,7 +28,8 @@ jobs:
         with:
           python-version: 3.9
 
-      # - run: pip3 install -r ~/app/requirements.txt
+      - run: |
+          pip3 install -r ~/app/requirements.txt
 
-      - run: python3 ~/app/main.py
-
+      - run: |
+          python3 ~/app/main.py
