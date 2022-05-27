@@ -19,9 +19,6 @@ redis_db = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
 
 def compile_user(user_name, db_data: S_UserData) -> S_User:
     user: S_User = S_User(name=user_name, data={**db_data})
-    #     'name': user_name,
-    #     'data': {**db_data},
-    # }
     return user
 
 
@@ -71,4 +68,4 @@ async def reset_user(user_name: str):
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

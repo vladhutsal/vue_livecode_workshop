@@ -7,7 +7,7 @@
       outlined
     >
       <v-card-text>
-        <connector-text-field 
+        <connector-text-field
           :label="'Your name'"
           :placeholder="'Enter your name'"
           :syncField.sync="nameField"
@@ -20,7 +20,7 @@
           :syncField.sync="descriptionField"
         />
 
-        <connector-text-field 
+        <connector-text-field
           :label="'Public message'"
           :placeholder="'Enter public message'"
           :syncField.sync="publicMsgField"

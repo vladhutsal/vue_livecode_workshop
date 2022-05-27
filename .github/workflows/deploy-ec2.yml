@@ -23,14 +23,3 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
           SOURCE: "backend/app/"
-
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-
-  start:
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
-      - run: pip3 install -r ~/app/requirements.txt
-      - run: python3 ~/app/main.py
